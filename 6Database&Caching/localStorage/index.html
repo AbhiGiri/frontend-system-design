@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark N Light Mode (Local Storage)</title>
+  <style>
+    body {
+      /* transition: background-color 0.5s; */
+      /* font-family: Arial, Helvetica, sans-serif; */
+      /* padding: 20px; */
+    }
+
+    .container {
+      /* max-width: 400px; */
+      /* margin: 0 auto; */
+    }
+
+    button {
+      /* padding: 10px; */
+      /* font-size: 16px; */
+      /* cursor: pointer; */
+    }
+
+    body.dark {
+      background-color: #333;
+      color: #fff;
+    }
+
+    body.light {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    body.dark h1{
+      color: #fff;
+    }
+
+    body.light h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dark/Light Mode</h1>
+    <button onclick="toggleMode()">Toggle Mode</button>
+  </div>
+
+  <script>
+    //function to toggle Dark/Light Mode
+    function toggleMode() {
+      const currentMode = localStorage.getItem('mode');
+      // toggle b/w dark/light mode
+      const newMode = currentMode === 'dark' ? 'light' : 'dark';
+      // update the body class and store the mode in localstorage
+      const body = document.body;
+      body.classList.remove(currentMode);
+      body.classList.add(newMode);
+      localStorage.setItem('mode', newMode);
+    };
+
+    // Check and Set the toggle mode on page load
+    function checkMode() {
+      const saveMode = localStorage.getItem('mode') || 'light';
+      const body = document.body;
+      body.classList.add(saveMode);
+    };
+
+    checkMode();
+  </script>
+</body>
+</html>

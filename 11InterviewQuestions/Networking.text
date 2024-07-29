@@ -1,0 +1,220 @@
+
+---------:: Networking Interview Questions :: ------------
+
+[1]. Can you explain the fundamental concept of how the internet works to someone with a non-technical background?
+Ans::- Imagine the internet as a vast network of roads connecting different places, but instead of cars, 
+  we have data traveling along these roads.
+
+  At the heart of the internet, are computers called servers. These servers store information, 
+  like websites, videos, and pictures. When you want to access something on the internet, like a website, 
+  your Computer sends a request to a Server asking for that information.
+
+  Now, imagine your request as a package that needs to be delivered. This package travels through the network 
+  of roads (which are actually cables and connections between servers and your device). 
+  These roads are made up of various technologies like fiber optics and copper wires, and they span across the globe.
+
+  Once your request reaches the Server hosting the website or information you want, it's like the package arriving at its destination. The server then sends back the requested information, packaged up and sent back along the network of roads to your computer. This process happens incredibly quickly, often in just a fraction of a second.
+
+  So, in simple terms, the Internet is like a giant interconnected network of Computers and Cables, 
+  allowing us to send and receive information from anywhere in the world almost instantly.
+
+
+[2]. What is the role of protocols in Internet communication, and can you name a few essential protocols?
+
+Ans::- Protocols play a crucial role in enabling communication over the internet by defining a set of rules and    conventions, that govern how data is transmitted and received between devices. They ensure that devices can        understand each other and communicate effectively. 
+  Here are a few essential protocols ::
+i). HTTP (Hypertext Transfer Protocol) :: 
+    This protocol governs, how "Web Browsers and Web Servers" communicate. 
+    It's the foundation of data communication for the "World Wide Web" (WWW).
+
+ii). HTTPS (Hypertext Transfer Protocol Secure)::
+    Similar to HTTP, but with an added layer of Security, provided by SSL/TLS encryption. 
+    It's used for secure communication over the internet, especially for sensitive transactions like 
+    online banking and e-commerce.      
+
+iii).TCP/IP (Transmission Control Protocol/Internet Protocol):: 
+    This is a suite of protocols, that govern, how data is transmitted across networks. 
+    TCP ensures that Data Packets are delivered reliably and in order, 
+    while IP handles the Addressing and Routing of Packets across the internet.   
+
+iv).DNS (Domain Name System)::
+    DNS translates human-readable domain names (like example.com) into IP addresses that computers use to identify each other on the internet. It's like a phonebook for the internet.    
+
+v). SMTP (Simple Mail Transfer Protocol)::
+    This protocol is used for sending email messages between servers. 
+    It defines How email servers Communicate and Transfer emails, across the internet.   
+
+vi).FTP (File Transfer Protocol)::
+    FTP is used for transferring files, between Computers on a network. 
+    It allows users to Upload & Download files to and from Remote Servers.   
+
+
+[3]. Diff. b/w "HTTP & HTTPS"?
+     Why is Secure Communication important on the Internet?
+
+Ans::- Both protocols are used for transferring data over the internet, 
+  but they differ in terms of "Security & Encryption" ::
+
+  i). HTTP (Hypertext Transfer Protocol)::
+  HTTP is the standard protocol, used for transmitting data between a web browser and a web server.
+  It sends data in plain text format, which means that the data is not encrypted and can be intercepted by    third parties.
+  Because HTTP does not provide encryption, any sensitive information transmitted over HTTP, such as
+  login credentials or credit card details, can be easily intercepted and stolen by hackers.
+
+  ii). HTTPS (Hypertext Transfer Protocol Secure)::
+  HTTPS is an extension of HTTP, that adds a layer of security through SSL/TLS encryption.
+  It encrypts the Data exchanged between the web browser and the web server, making it much more difficult for hackers to intercept and decipher.
+  Websites that use HTTPS have a valid SSL/TLS certificate, which verifies the authenticity of the website and ensures that the data transmitted between the User and the website, remains private and secure.
+
+  Secure communication on the internet is important for several reasons ::--
+
+  i). Protection of Sensitive Information ::
+    Secure communication ensures that sensitive information, such as personal data, login credentials, and financial details, remains confidential and cannot be intercepted by unauthorized parties.
+
+  ii). Prevention of Data Tampering::
+  Encryption helps prevent data from being tampered with or modified during transmission. This ensures the integrity of the data and protects against unauthorized modifications by hackers.
+
+  iii). Trust and Credibility::
+  Websites that use HTTPS and display a valid SSL/TLS certificate instill trust and confidence in users. 
+  It indicates that the website takes security seriously and is committed to protecting users' privacy.
+
+  iv). Compliance with Regulations:: 
+  Many regulations and standards, such as the GDPR (General Data Protection Regulation) and PCI DSS (Payment Card Industry Data Security Standard), require websites to implement secure communication protocols like HTTPS to protect user data and comply with legal requirements.
+
+  Overall, secure communication on the internet is essential for safeguarding sensitive information, maintaining trust between users and websites, and ensuring compliance with regulatory standards.
+
+
+[4]. How do DNS (Domain Name System) and IP (Internet Protocol) addresses work together to facilitate internet communication?
+
+Ans:- DNS and IP addresses work together to facilitate internet communication by translating human-readable domain names 
+  into numerical IP addresses that computers can understand, and use to locate resources on the internet.
+
+Here's how they work together::
+
+ i). Domain Name System (DNS)::
+  DNS is like a phonebook for the internet. It maintains a decentralized database that maps domain names (like example.com) 
+  to corresponding IP addresses (like 192.0.2.1).
+
+  When you type a domain name into your web browser's address bar, such as www.google.com, your computer first checks 
+  its local DNS cache to see if it already knows the corresponding IP address. 
+  If not, it sends a DNS query to a DNS resolver.
+
+  The DNS resolver then queries DNS servers to find the IP address associated with the requested domain name. 
+  This process involves multiple steps, including querying root DNS servers, top-level domain (TLD) servers, and 
+  authoritative DNS servers for the specific domain.
+
+  Once the DNS resolver receives the IP address from the authoritative DNS server, it caches the mapping for future 
+  use and returns the IP address to your computer.
+
+  Your computer then uses the obtained IP address to establish a connection with the corresponding web server and 
+  retrieve the requested web page or resource.
+
+ii). IP Addresses::
+  IP addresses are unique numerical identifiers assigned to devices connected to a network, 
+  such as computers, servers, and routers.
+
+  Every device connected to the internet has an IP address that allows it to be located and communicated with by other devices.
+
+  IP addresses are used to route data packets across the internet. When you send a request to access a website,
+  your computer sends data packets containing the request to the destination IP address, which is the IP address of 
+  the web server hosting the website.
+
+  Routers on the internet use IP addresses to forward these data packets along the appropriate paths 
+  to reach their destination, similar to how postal addresses are used to route mail to its destination.
+
+  In summary, 
+  DNS translates human-readable domain names into numerical IP addresses, allowing computers to locate 
+  resources on the internet. Once the IP address is obtained, it is used to establish connections and 
+  route data packets across the internet to the desired destination.
+
+
+
+ [5]. Explain the concept of REST (Representational State Transfer) in the context of web services.
+
+ Ans:- REST is an architectural style for designing networked applications, especially web services. 
+  It's based on a few key principles that emphasize simplicity, scalability, and interoperability. 
+  Here's a breakdown of the main concepts of REST:
+
+  i). Resources:: 
+    In REST, everything is considered a resource. A resource can be any object, data, or service 
+  that can be accessed over the internet. Each resource is identified by a unique URI (Uniform Resource Identifier), 
+  which serves as its address.
+
+  ii). Uniform Interface::
+    RESTful APIs (Application Programming Interfaces) provide a uniform interface for accessing and manipulating resources. 
+  This interface is typically based on standard HTTP methods, such as GET, POST, PUT, DELETE, which correspond to 
+  CRUD (Create, Read, Update, Delete) operations.
+
+  iii). Statelessness:: 
+    One of the fundamental principles of REST is statelessness. This means that each request from a client to the server 
+  must contain all the information necessary to understand and process the request. The server does not store 
+  any client state between requests, which improves scalability and simplifies implementation. 
+
+  iv). Representation::
+   Resources in REST are represented in different formats, such as JSON (JavaScript Object Notation) or XML (eXtensible Markup Language). 
+   Clients interact with resources by exchanging representations of the resource state. 
+   For example, a client may request a resource in JSON format and receive a JSON representation of the resource from the server.
+
+  v). Hypermedia as the Engine of Application State (HATEOAS)::
+   HATEOAS is a principle in REST, that emphasizes the use of hypermedia links, to navigate between resources. 
+  This means that responses from the server contain links to related resources, allowing clients to discover 
+  and interact with resources dynamically without prior knowledge of their structure. 
+
+    By adhering to these principles, RESTful web services promote a uniform and scalable approach to designing APIs, 
+  making it easier for clients to interact with resources over the internet. 
+  REST has become the de facto standard for building web APIs due to its simplicity, flexibility, and widespread 
+  adoption.
+
+
+ [6]. What are the key principles of RESTful API design, and why are they important?
+
+ Ans:- The key principles of RESTful API design are fundamental guidelines that help to ensure that APIs are well-designed, 
+  scalable, and easy to use. Adhering to these principles promotes consistency, interoperability, and simplicity. 
+  Here are the key principles of RESTful API design:
+
+i). Resource-Based:: 
+    Resources are the core abstraction in RESTful APIs. Each resource should be identified by a unique URI (Uniform Resource Identifier), 
+  and clients should interact with these resources using standard HTTP methods (GET, POST, PUT, DELETE). 
+  This principle promotes a consistent and intuitive interface for accessing and manipulating resources.
+
+ii).Uniform Interface:: 
+    RESTful APIs should provide a uniform interface for interacting with resources. This means that clients should 
+  be able to use standard HTTP methods and status codes to perform CRUD (Create, Read, Update, Delete) operations 
+  on resources. Additionally, APIs should use standard media types (such as JSON or XML) to represent resource state, 
+  allowing clients to easily understand and process API responses.
+
+iii).Statelessness::
+   RESTful APIs should be stateless, meaning that each request from a client to the server should contain 
+  all the information necessary to understand and process the request. The server should not store any client state 
+  between requests. This principle simplifies server implementation, improves scalability, and promotes loose coupling 
+  between clients and servers.  
+
+iv).Cacheability::
+   APIs should be designed to leverage caching whenever possible to improve performance and scalability. 
+  Responses from the server should include cache-control headers that indicate whether the response can be cached 
+  and, if so, for how long. This principle helps reduce server load and network latency by allowing clients to 
+  cache responses locally.  
+
+v). Layered System:: 
+    RESTful APIs should be designed in a layered architecture, where each component (e.g., client, server, cache) 
+  operates independently and interacts only with adjacent layers. This principle promotes scalability, flexibility, 
+  and interoperability by allowing components to be added, removed, or replaced without affecting the overall system.  
+
+vi). Code on Demand (Optional)::
+   RESTful APIs may optionally support "code on demand," which allows servers to transmit executable code 
+  (e.g., JavaScript) to clients as part of API responses. While this principle is not commonly used in practice, 
+  it can be useful for implementing dynamic client behavior in certain scenarios.  
+
+By following these key principles, RESTful API designers can create APIs that are consistent, scalable, and easy to use, 
+fostering interoperability and simplifying integration with client applications.
+
+
+[7]. How does a client-server architecture function in the context of web development and APIs?  
+
+
+
+
+ 8. Canyouprovide examples of HTTP methods used in RESTful APIs and briefly explain their purposes?
+ 9. Whatisthe purpose of status codes in HTTP responses, and can you give examples of commonstatus codes?
+ 10. Explain the concept of statelessness in RESTful APIs and why it is considered a key principle.
+ 

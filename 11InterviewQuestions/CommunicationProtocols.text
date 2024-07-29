@@ -1,0 +1,27 @@
+
+---------:: Communication Protocol Interview Questions ::---------
+
+ 1. What is short polling, and how does it differ from other communication techniques like long polling and WebSockets?
+
+ 2. Explain the basic workflow of short polling in web development.
+ 3. Whataretheadvantages and disadvantages of using short polling for real-time
+ communication?
+ 4. Describe the concept of long polling and how it addresses some of the limitations of
+ short polling.
+ 5. Whatscenarios are suitable for using long polling, and what are its potential drawbacks
+ 6. Explain how long polling can be implemented on the client and server sides.
+ 7. WhatisaWebSocket, and how does it enable full-duplex communication between
+ clients and servers?
+ 8. HowdoesWebSockethandle bi-directional communication, and what are its key
+ advantages for real-time applications?
+ communication techniques?
+ 9. Explain the WebSocket handshake process and the role of the "Upgrade" header.
+ 10. What are Server-Sent Events (SSE), and how do they differ from other real-time
+ 11. Describe the steps involved in implementing Server-Sent Events in a web application.
+ 12. What types of applications benefit most from using SSE, and what are the potential
+ limitations?
+ 13. Define what a webhook is and how it facilitates communication between applications.
+ 14. Compare webhooks with other real-time communication techniques in terms of use
+ cases and implementation complexity.
+ 15. When would you choose WebSockets over other communication techniques like short
+ polling or long polling, and vice versa

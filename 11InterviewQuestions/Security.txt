@@ -1,0 +1,86 @@
+ ------------------ :: Security Interview Questions :: -------------------------
+
+ [1]. What is XSS, and how does it pose a security risk in web applications?
+ ans:- XSS stands for Cross-Site Scripting. 
+      XSS is a type of security vulnerability, typically found in web applications. 
+      It allows attackers to inject malicious scripts into content that is delivered to users. 
+      XSS attacks occur when an attacker uses a web application to send malicious code, usually in the form of a browser-side script, 
+      to a different end user.
+   How XSS Works ::
+   (i). Injection:: 
+      An attacker injects malicious code into a web application. 
+      This can happen in various ways, such as through user input fields, URLs, or other inputs that are not properly sanitized.
+   (ii). Execution:: 
+      When another user loads the affected page, the malicious script is executed in their browser.
+   (iii). Impact:: 
+      The script can perform a variety of actions such as stealing cookies, session tokens, or other sensitive information, 
+      defacing websites, or redirecting the user to a malicious site.
+
+   Types of XSS ::
+   (i). Stored XSS (Persistent XSS)::
+   The malicious script is permanently stored on the target server, such as in a database, comment field, or any other data storage.
+   When the victim requests the stored information, the script is delivered as part of the web response and executed by the browser. 
+   
+   (ii). Reflected XSS (Non-Persistent XSS):
+   The injected script is reflected off a web server, such as in an error message, search result, or any other response 
+   that includes some or all of the input sent to the server as part of the request.
+   The script is then executed in the context of the user’s browser.
+
+   (iii). DOM-Based XSS:
+   The vulnerability is in the client-side code rather than the server-side code.
+   The script is executed as a result of modifying the DOM environment in the victim’s browser, for example, via the Document Object Model.
+
+   Security Risks Posed by XSS ::
+   (i).  Data Theft          :: Attackers can steal cookies, session tokens, or other sensitive information stored by the browser.
+   (ii). User Impersonation  :: If an attacker steals session tokens, they can impersonate the victim and perform actions on their behalf.
+  (iii). Malware Distribution:: XSS can be used to deliver malicious scripts that can lead to further compromise, such as installing malware on the victim's device.
+   (iv). Phishing            :: Attackers can create fake forms that look like legitimate parts of a website to steal sensitive information from users.
+   (v).  Session Hijacking   :: Attackers can gain control of a user's active session, leading to unauthorized access to user accounts.
+   (vi). Website Defacement  :: Malicious scripts can alter the content displayed on the web page, leading to defacement or misinformation.
+   
+   Mitigation Strategies ::
+   (i).  Input Validation :: Ensure all input is validated and sanitized. Only accept expected input and reject anything that doesn't conform to the rules.
+   (ii). Output Encoding :: Encode data before it is rendered in the browser, so any injected script does not get executed.
+   (iii).Use Security Libraries and Frameworks :: Utilize frameworks and libraries that automatically handle many aspects of XSS prevention.
+   (iv). Content Security Policy (CSP) :: Implement CSP headers to restrict how and what resources can be loaded and executed on the page.
+   (v).  HTTPOnly Cookies :: Use HTTPOnly flags on cookies to prevent access to the cookie data via JavaScript.
+   (vi). Regular Security Testing :: Regularly conduct security audits and penetration tests to identify and fix vulnerabilities.
+   
+By understanding and mitigating XSS vulnerabilities, web developers can significantly reduce the risk of these types of attacks on their web applications.
+
+ 2. Explain the concept of output encoding and its role in preventing XSS attacks.
+ 3. Howcan aContent Security Policy (CSP) help mitigate XSS vulnerabilities?
+ 4. Discuss the impact of XSS on user privacy and data integrity.
+ 5. What are some best practices for developers to prevent XSS attacks in their
+ applications?
+ 6. What is CSRF, and how does it work as an attack vector?
+ 7. Explain the role of anti-CSRF tokens in preventing CSRF attacks.
+ 8. Howdoes the SameSite cookie attribute contribute to CSRF protection?
+ 9. Discuss scenarios where CSRF attacks can have severe consequences.
+ 10. What are common methods to secure against CSRF attacks in web applications?
+ 11. Why are IFrames a potential security risk, and how can they be used maliciously?
+ 12. Describe techniques to prevent clickjacking and other IFrame-related attacks.
+ 13. How does the X-Frame-Options header contribute to IFrame protection?
+ 14. Differentiate between authentication and authorization in the context of web security.
+ 15. Name and describe key security headers used to enhance web application security.
+ 16. Explain how the Strict-Transport-Security (HSTS) header improves security.
+ 17. Discuss security considerations when using client-side storage mechanisms like cookies
+ and localStorage.
+ 18. How can SameSite cookies and the HttpOnly flag enhance client-storage security?
+ 19. Why is HTTPS important for securing communication between clients and servers?
+ 20. Explain the role of SSL/TLS in establishing a secure connection.
+ 21. How can the use of third-party dependencies introduce security vulnerabilities?
+ 22. Discuss best practices for securing and monitoring dependencies in a web application.
+ 23. What are common compliance standards and regulations related to web application
+ security?
+ 24. How can compliance with standards like GDPR and PCI DSS impact web application
+ security?
+ 25. Why is input validation crucial for preventing security vulnerabilities?
+ 26. What is SSRF, and how can it be exploited by attackers?
+ 27. Discuss methods to prevent SSRF attacks in a web application.
+ 28. What is SSJI, and how does it pose a security risk?
+ 29. How can developers prevent server-side JavaScript injection vulnerabilities?
+ 30. How can these policies help control and restrict certain features in a web application?
+ 31. Explain the purpose of Feature Policy and Permissions-Policy headers in web security.
+ 32. What is SRI, and how does it contribute to the security of external resources?
+ 33. Discuss the implementation and benefits of Subresource Integrity

@@ -1,0 +1,22 @@
+{
+  "components": [
+    {
+      "type": "button",
+      "props": {
+        "text": "Click me!",
+        "onClick": "handleClick"
+      }
+    },
+    {
+      "type": "input",
+      "props": {
+        "placeholder": "Enter your name",
+        "onChange": "handleChange"
+      }
+    }
+  ],
+  "handlers": {
+    "handleClick": "console.log('Button clicked')",
+    "handleChange": "console.log('Input changed')"
+  }
+}
